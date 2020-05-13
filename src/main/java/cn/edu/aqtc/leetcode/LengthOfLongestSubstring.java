@@ -47,14 +47,14 @@ public class LengthOfLongestSubstring {
                 start = Math.max(start, chLocation.get(ch));
             }
             max = Math.max(max, (end - start + 1));
-            chLocation.put(ch, start + 1);
+            chLocation.put(ch, end + 1);
         }
 
         return max;
     }
 
     public static void main(String[] args) {
-        String test = "abcabcbb";
+        String test = "pwwkew";
         System.out.println(lengthOfLongestSubstring(test));
     }
 
