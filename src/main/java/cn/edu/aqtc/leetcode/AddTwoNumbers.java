@@ -59,27 +59,29 @@ public class AddTwoNumbers {
         System.out.println(addTwoNumbers(l1, l2));
 
     }
-}
 
-class ListNode {
-    int val;
-    ListNode next;
+    static class ListNode {
+        int val;
+        ListNode next;
 
-    public ListNode(int val) {
-        this.val = val;
-    }
-
-    @Override
-    public String toString() {
-        final StringBuffer sb = new StringBuffer("ListNode (");
-        sb.append(val);
-        ListNode current = next;
-        while (current != null) {
-            sb.append(" -> ").append(current.val);
-            current = current.next;
+        public ListNode(int val) {
+            this.val = val;
         }
-        sb.append(" ) ");
 
-        return sb.toString();
+        @Override
+        public String toString() {
+            final StringBuffer sb = new StringBuffer("ListNode (");
+            sb.append(val);
+            ListNode current = next;
+            while (current != null) {
+                sb.append(" -> ").append(current.val);
+                current = current.next;
+            }
+            sb.append(" ) ");
+
+            return sb.toString();
+        }
     }
 }
+
+
